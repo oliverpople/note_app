@@ -9,7 +9,7 @@
     for (var i = 0; i < notelist.length; i++) {
       html += ("<li><div>" + notelist[i].getNoteText() + "</div></li>")
     }
-  return html;
+  return "<ul>" + html + "</ul>";
   };
 
 exports.NoteListView = NoteListView;
