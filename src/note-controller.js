@@ -7,25 +7,13 @@
     this._noteListView = new NoteListView(this._noteList);
     this._noteList.createNote('Favourite drink: seltzer');
   };
+
 exports.NoteController = NoteController;
 }) (this);
 
+  var element = document.getElementById('app')
 NoteController.prototype.listMaker = function(element) {
-  // var element = document.getElementById('app');
-    element.innerHTML = this._noteListView.printList();
+element.innerHTML = this._noteListView.printList();
 };
-
-
-
-
 window.onload = function () {
-
-// var element = document.getElementById('app');
-
-// element.innerHTML = function(){
-//   return 'Howdy'
-// }();
-
-// element.innerHTML = 'Howdy';
-
 };
