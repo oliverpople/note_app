@@ -28,3 +28,14 @@
   };
   printList();
 })(this);
+
+
+(function(exports) {
+  function printList() {
+    var notelist = new NoteList();
+    notelist.createNote('This string has more than 20 characters!!!');
+    var notelistview = new NoteListView(notelist);
+    assert.isTrue(notelistview.printList() === "<ul><li><div>This string has more...</div></li></ul>");
+  };
+  printList();
+})(this);
