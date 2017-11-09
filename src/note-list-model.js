@@ -8,7 +8,8 @@
   };
 
   NoteList.prototype.createNote = function(text) {
-    var note = new Note(text);
+    var id = this.getNotes().length;
+    var note = new Note(text, id);
     this._list.push(note);
   };
 

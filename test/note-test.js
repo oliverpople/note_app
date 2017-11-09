@@ -17,3 +17,13 @@
 
   testNoteIsReturnString();
 })(this);
+
+// (function(exports) {
+
+//   function testNoteHasAnId() {
+//     var note = new Note('hello');
+//     assert.isTrue(note.getNoteId() === 0);
+//   };
+//
+//   testNoteHasAnId();
+// })(this);

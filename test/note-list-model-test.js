@@ -32,3 +32,12 @@
   };
   createNote();
 })(this);
+
+(function(exports) {
+  function assignsNoteId() {
+    var notelist = new NoteList();
+    notelist.createNote();
+    assert.isTrue(notelist.getNotes()[0].getNoteId() === 0)
+  }
+  assignsNoteId();
+})(this);
