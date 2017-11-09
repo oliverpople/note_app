@@ -1,9 +1,9 @@
 "use strict";
 
 (function(exports) {
-  function NoteController(appitem = NoteList) {
-// defaults to notelist but can be something else
-    this._noteList = new appitem();
+  function NoteController() {
+// probs better to instantiate other classes somewhere outside of this class and inject them
+    this._noteList = new NoteList();
     this._noteListView = new NoteListView(this._noteList);
     this._noteList.createNote('Favourite drink: seltzer');
   };
