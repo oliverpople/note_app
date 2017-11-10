@@ -6,9 +6,9 @@
   NoteListView.prototype.printList = function() {
     var notelist = this._notelist.getNotes();
     var html = "";
-    var test = "";
     for (var i = 0; i < notelist.length; i++) {
       var id = notelist[i].getNoteId();
+      /// id dosen't matter can just use 'i' instead
       var notestring = notelist[i].getNoteText();
       if (notestring.length >= 20) {
         notestring = notestring.slice(0, 20) + "...";
