@@ -14,7 +14,10 @@
   };
 
   NoteList.prototype.getNoteTextByIndex = function(noteIndex) {
+// console.log(noteIndex);
+// console.log(this._list[noteIndex]);
     return this._list[noteIndex].getNoteText();
+    // return note.getNoteText();
   };
 
 exports.NoteList = NoteList;

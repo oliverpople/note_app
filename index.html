@@ -24,30 +24,7 @@
     <script src="app.js"></script>
 
     <div id="note"></div>
-        <script>
-        makeUrlChangeShowNoteForCurrentPage();
-
-        function makeUrlChangeShowNoteForCurrentPage() {
-          window.addEventListener("hashchange", showNoteForCurrentPage);
-        };
-
-        function showNoteForCurrentPage() {
-          showNote(getNoteFromUrl(window.location));
-        };
-
-        function getNoteFromUrl(location) {
-          var noteIndex = location.hash.split("#")[1];
-
-          return controller._noteList._list[noteIndex]._text;
-        };
-
-        function showNote(note) {
-          document
-            .getElementById("note")
-            .innerHTML = note;
-        };
-        </script>
-
+        
 </body>
 
 </html>
