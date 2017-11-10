@@ -5,27 +5,32 @@
 // probs better to instantiate other classes somewhere outside of this class and inject them
     this._noteList = new NoteList();
     this._noteListView = new NoteListView(this._noteList);
-    // this._noteList.createNote('Favourite drink: seltzer');
-  };
+  }
 
 NoteController.prototype.eventListener = function () {
+  var self = this;  // reassigns the this keyword so the 'this in an anonymous function refers to the right thing'
   document.getElementById('submitnote').addEventListener("click", function(e) {
-    this._noteListView.printList();
+    self._noteList.createNote(self.readInputText());
+    var noteslinks = document.getElementById('noteslinks');
+    self.listMaker(noteslinks);
     e.preventDefault();
   });
 };
 
-exports.NoteController = NoteController;
-}) (this);
-
-
-  var element = document.getElementById('app')
 NoteController.prototype.listMaker = function(element) {
-element.innerHTML = this._noteListView.printList();
+  element.innerHTML = this._noteListView.printList();
 };
 
 
-window.onload = function () {
-  controller = new NoteController();
-  controller.eventListener();
-};
+NoteController.prototype.readInputText = function () {
+  var inputtext = document.getElementById('text').value;
+  return inputtext;
+  };
+
+
+NoteController.prototype.getNoteListText = function (noteIndex) {
+    this._noteList.getNoteTextByIndex(noteIndex);
+  };
+
+exports.NoteController = NoteController;
+})(this);

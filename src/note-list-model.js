@@ -13,5 +13,9 @@
     this._list.push(note);
   };
 
+  NoteList.prototype.getNoteTextByIndex = function(noteIndex) {
+    return this._list[noteIndex].getNoteText();
+  };
+
 exports.NoteList = NoteList;
 })(this);

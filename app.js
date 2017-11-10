@@ -1,3 +1,4 @@
+window.onload = function () {
 controller = new NoteController();
-var element = document.getElementById('app')
-controller.listMaker(element);
+  controller.eventListener();
+};
