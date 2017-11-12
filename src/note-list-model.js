@@ -17,6 +17,9 @@
 // console.log(noteIndex);
 // console.log(this._list[noteIndex]);
     return this._list[noteIndex].getNoteText();
+    // selectednote = this._list[noteIndex]
+    // console.log(selectednote);
+    // return selectednote.getNoteText();
     // return note.getNoteText();
   };
 
